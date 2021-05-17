@@ -1,6 +1,6 @@
 import {useState} from "react";
 import "./ExpenseItem.css"
-import ExpenseDate from "./ExpenseDate"
+//import ExpenseDate from "./ExpenseDate"
 
 function ExpenseItem(props) {
 
@@ -14,7 +14,7 @@ const clickHandler = () => {
 
   return (
     <div className="expense-item">
-        <ExpenseDate date={props.date}/>
+         {/* <ExpenseDate date={props.date}/>  */}
         {/* <div>
              {props.date.toISOString()} 
         </div> */}
