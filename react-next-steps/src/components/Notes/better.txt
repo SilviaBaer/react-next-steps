@@ -21,6 +21,20 @@
 - rendering in case of nested h2 can be confusing and hard to read
 - style a button with a div and and event listener ... it works but ... meh 
 - cfr. modal
-- 
+- the code looks like it renders in the same way, IRL it is just rendered in a different DOM
+
+
+*** *** *** WORKING WITH REF'S *** *** ***
+
+- they allow us to access to the portals 
+- useRef hook only usable in a functional component
+- connecting ref with an HTML element
+- ref prop inside the HTML element 
+
+
+*** *** *** UNCONTROLLED COMPONENTS *** *** ***
+
+
+
 
 
