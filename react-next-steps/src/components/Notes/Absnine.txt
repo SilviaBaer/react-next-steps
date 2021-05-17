@@ -1,0 +1,9 @@
+*** JSX LIMITATIONS & WORKAROUNDS ***
+
+- you cannot return more than one "root" JSX element
+- you cannot store more than one "root" JSX element in a a var
+- solutions: 
+    . :) wrap with a div element or custom component
+    . :( wrapping div soup: there are there without any semantic so browser could be slowed down (ok but no ideal)
+
+- WRAPPER COMPONENT 
