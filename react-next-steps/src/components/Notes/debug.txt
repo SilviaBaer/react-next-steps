@@ -1,0 +1,14 @@
+Notes about DEBUGGING 
+
+- READ ERROR MESSAGES in terminal connecting the error messages to the snippets are coming from
+
+- analyzing code flow & warnings 
+    . going from children to parents till origin
+    . warning in console 
+
+- BREAKPOINTS (browser)
+    . page > users > src or webpack
+    . in this way you can inspect the code 
+
+- USING THE REACT DevTools
+    . installed!! :)
