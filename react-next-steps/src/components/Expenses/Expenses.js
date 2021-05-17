@@ -16,6 +16,22 @@ const Expenses = (props) => {
     return expense.date.getFullYear().toString() === filteredYear;
   } )
 
+  //OPTION A = NO EXPENSES FOUND (JSX CODE)
+  let expensesContent = <p>No expenses found.</p>
+
+  //OPTION B = N EXPENSES FOUND (ARRAY OF ELEMENTS)
+  if (filteredExpenses.length > 0) 
+ {
+  expensesContent = filteredExpenses.map((expense) => (
+    <ExpenseItem
+      key={expense.id}
+      title={expense.title}
+      amount={expense.amount}
+      date={expense.date}
+    />
+  ))}
+
+  //THE OPTIONS A OR B ARE NOW DINAMICALLY RENDERED IN THE EXPENSES CONTENT VARIABLE
   return (
     <div>
       <Card className='expenses'>
@@ -23,15 +39,7 @@ const Expenses = (props) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {filteredExpenses.length === 0 && <p>No expenses found</p>}
-        {filteredExpenses.length > 0 && filteredExpenses.map((expense) => (
-          <ExpenseItem
-            key={expense.id}
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-          />
-        ))}
+{expensesContent}
       </Card>
     </div>
   );
