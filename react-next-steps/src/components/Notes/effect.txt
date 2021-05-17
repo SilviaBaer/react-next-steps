@@ -1,0 +1,22 @@
+REACT APP JOBS SO FAR: (something on the screen)
+- render UI
+- react user input
+- re-render UI when needed
+function that runs every time the state differs
+
+SIDE EFFECTS: EVERYTHING ELSE!!! 
+- store data in browser storage
+- send HTTP req to backend servers 
+- set & manage timers
+These happens outside the normal component function and evaluation
+
+handling Side Effects with useEffect() hook
+
+useEffect(() => {...}, [dependencies]);
+
+- A function that should be executed AFTER every component evaluation IF the specified dependencies changed
+  Only when dependencies change, not just when the component is re-rendered!!  
+    - SIDE EFFECT CODE GOES HERE!! - 
+
+- An array with dependencies. When they change the first function re-runs
+    - DEPENDENCIES OF THE FUNCTION GOES HERE!! -
