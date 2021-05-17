@@ -1,23 +1,25 @@
-import ExpenseForm from "./ExpenseForm"
-import "./NewExpense.css"
+import React from 'react';
 
-const NewExpense = () => {
-    const saveExpenseDataHandler = (enteredExpenseData) => {
-        const expenseData ={
-            ...enteredExpenseData,
-            id: Math.random().toString()
-        }
-        console.log(expenseData);
-    }
+import ExpenseForm from './ExpenseForm';
+import './NewExpense.css';
 
-    return (
-        <div className="new-expense">
-            <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
-        </div>
-    )
-}
+const NewExpense = (props) => {
+  const saveExpenseDataHandler = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
+      id: Math.random().toString()
+    };
+    props.onAddExpense(expenseData);
+  };
 
-export default NewExpense
+  return (
+    <div className='new-expense'>
+      <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
+    </div>
+  );
+};
+
+export default NewExpense;
 
 //***BOTTOM UP */from children to parent 1/2
 //onSaveExpenseData function that gets triggered when something happens inside the component aka 
