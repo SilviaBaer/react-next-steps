@@ -23,7 +23,8 @@ const Expenses = (props) => {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {filteredExpenses.map((expense) => (
+        {filteredExpenses.length === 0 && <p>No expenses found</p>}
+        {filteredExpenses.length > 0 && filteredExpenses.map((expense) => (
           <ExpenseItem
             key={expense.id}
             title={expense.title}
@@ -38,6 +39,10 @@ const Expenses = (props) => {
 
 export default Expenses;
 
+
+//TERNARY OPERATION AND CONDITIONAL CONTENT
+//TERNARY OPERATOR VERSION IS COOL but also a bit hard to read. 
+//conditional operator works better here because they are two different indipendent conditions that can co-exist
 //comments
 //fist hardcoded version
    //hardcoded const (now deprecated by props)
