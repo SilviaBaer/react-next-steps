@@ -1,4 +1,4 @@
-*** JSX LIMITATIONS & WORKAROUNDS ***
+*** *** *** JSX LIMITATIONS & WORKAROUNDS *** *** ***
 
 - you cannot return more than one "root" JSX element
 - you cannot store more than one "root" JSX element in a a var
@@ -14,5 +14,13 @@
     - FRAGMENTS
     . <React.Fragment></React.Fragment>
     . <> </>
+
+
+*** *** *** PORTALS *** *** *** 
+
+- rendering in case of nested h2 can be confusing and hard to read
+- style a button with a div and and event listener ... it works but ... meh 
+- cfr. modal
+- 
 
 
