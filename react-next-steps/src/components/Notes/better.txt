@@ -1,0 +1,40 @@
+*** *** *** JSX LIMITATIONS & WORKAROUNDS *** *** ***
+
+- you cannot return more than one "root" JSX element
+- you cannot store more than one "root" JSX element in a a var
+- solutions: (they all work the same!!)
+
+    - DIV ELEMENT
+    . :) wrap with a div element or custom component
+    . :( wrapping div soup: there are there without any semantic so browser could be slowed down (ok but no ideal)
+
+    - WRAPPER COMPONENT 
+    react-next-steps\src\components\Helpers\Wrapper.js
+
+    - FRAGMENTS
+    . <React.Fragment></React.Fragment>
+    . <> </>
+
+
+*** *** *** PORTALS *** *** *** 
+
+- rendering in case of nested h2 can be confusing and hard to read
+- style a button with a div and and event listener ... it works but ... meh 
+- cfr. modal
+- the code looks like it renders in the same way, IRL it is just rendered in a different DOM
+
+
+*** *** *** WORKING WITH REF'S *** *** ***
+
+- they allow us to access to the portals 
+- useRef hook only usable in a functional component
+- connecting ref with an HTML element
+- ref prop inside the HTML element 
+
+
+*** *** *** UNCONTROLLED COMPONENTS *** *** ***
+
+
+
+
+
